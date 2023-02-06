@@ -188,7 +188,7 @@ function multi() {
 
 }
 function serverw() {
-    setTimeout(() => { document.getElementById('bar').style = "opacity:1;transition:opacity 10s;position:absolute;bottom: 1.5%;" }, 4000);
+    setTimeout(() => { document.getElementById('bar').style = "opacity:1;transition:opacity 10s;position:absolute;bottom: 8%;" }, 4000);
     if(width < 1400 && width > 490){
         document.getElementById("cards").style = "left:31.5%;%";
     } else if (width < 490) {
@@ -219,7 +219,7 @@ function serverw() {
     setTimeout(() => { document.getElementById('multi2white').style.transition = 'opacity 2s'; }, 1000);
 }
 function serverb() {
-    setTimeout(() => { document.getElementById('bar').style = "opacity:1;transition:opacity 10s;position:absolute;bottom: 1.5%;" }, 4000);
+    setTimeout(() => { document.getElementById('bar').style = "opacity:1;transition:opacity 10s;position:absolute;bottom: 8%;" }, 4000);
     document.getElementById("text").style.display = "block";
     document.getElementById("text").style= "font-size:20px;";
     document.getElementById("text").style.color = "#FFF";
