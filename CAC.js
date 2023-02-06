@@ -1,4 +1,19 @@
-
+var cssId = 'css';  // you could encode the css path itself to generate id..
+var width = screen.width;
+        if (!document.getElementById(cssId))
+        {
+            var head  = document.getElementsByTagName('head')[0];
+            var link  = document.createElement('link');
+            link.id   = cssId;
+            link.rel  = 'stylesheet';
+            link.type = 'text/css';
+            if(width < 480) {
+                link.href = 'CACmobile.css';
+            } else {
+                link.href = 'CAC.css'
+            }
+            head.appendChild(link);
+        }
 function cah() {
     setTimeout(() => { document.getElementById('head').style.opacity = '1'; }, 1500);
     setTimeout(() => { document.getElementById('name').style.opacity = '1'; }, 2500);
@@ -173,8 +188,12 @@ function multi() {
 
 }
 function serverw() {
-    setTimeout(() => { document.getElementById('bar').style = "opacity:1;transition:opacity 10s;position:absolute;top:90%;" }, 4000);
-    document.getElementById("cards").style = "left:29%";
+    setTimeout(() => { document.getElementById('bar').style = "opacity:1;transition:opacity 10s;position:absolute;bottom: 1.5%;" }, 4000);
+    if(width < 1260 && width > 490){
+        document.getElementById("cards").style = "left:33%";
+    } else if (width < 490) {
+        document.getElementById("cards").style = "left:4%";
+    }else {document.getElementById("cards").style = "left:29%";}
     document.getElementById("multiwhite").style.display = "block";
     document.getElementById("multiwhite").style.opacity = "1";
     document.getElementById("cards").style.display = "block";
@@ -200,7 +219,7 @@ function serverw() {
     setTimeout(() => { document.getElementById('multi2white').style.transition = 'opacity 2s'; }, 1000);
 }
 function serverb() {
-    setTimeout(() => { document.getElementById('bar').style = "opacity:1;transition:opacity 10s;position:absolute;top:90%;" }, 4000);
+    setTimeout(() => { document.getElementById('bar').style = "opacity:1;transition:opacity 10s;position:absolute;bottom: 1.5%;" }, 4000);
     document.getElementById("text").style.display = "block";
     document.getElementById("text").style= "font-size:20px;";
     document.getElementById("text").style.color = "#FFF";
@@ -211,7 +230,11 @@ function serverb() {
     document.getElementById('card').style.opacity = '1';
     document.getElementById('logo').style.opacity = '1';
     document.getElementById('text').style.opacity = '1';
-    document.getElementById("card").style.left="37.5%";
+    if(width < 1260 && width > 490) {
+        document.getElementById("card").style.left="38.5%";
+    } else if (width < 490) {
+        document.getElementById("card").style.left="12.5%";
+    } else {document.getElementById("card").style.left="37.5%";}
     document.getElementById("multiblack").style.display = "block";
     document.getElementById("multiblack").style.opacity = "1";
     document.getElementById("multiblack").innerHTML = "Get card";
