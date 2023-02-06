@@ -653,7 +653,7 @@ place-items: center;
 }
 .bar {
   position: absolute;
-  margin-top:-165%;
+  bottom: 1.5%;
   width: 100%;
   opacity: 0;
   transition: opacity 2s;
@@ -664,7 +664,7 @@ a:-webkit-any-link {
 }
 .bar ul {
   float: right;
-  margin-right: 11%;
+  margin-right: 12%;
 }
 
 .bar li {
