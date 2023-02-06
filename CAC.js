@@ -189,8 +189,8 @@ function multi() {
 }
 function serverw() {
     setTimeout(() => { document.getElementById('bar').style = "opacity:1;transition:opacity 10s;position:absolute;bottom: 1.5%;" }, 4000);
-    if(width < 1260 && width > 490){
-        document.getElementById("cards").style = "left:33%";
+    if(width < 1400 && width > 490){
+        document.getElementById("cards").style = "left:31.5%;%";
     } else if (width < 490) {
         document.getElementById("cards").style = "left:4%";
     }else {document.getElementById("cards").style = "left:29%";}
@@ -230,8 +230,8 @@ function serverb() {
     document.getElementById('card').style.opacity = '1';
     document.getElementById('logo').style.opacity = '1';
     document.getElementById('text').style.opacity = '1';
-    if(width < 1260 && width > 490) {
-        document.getElementById("card").style.left="38.5%";
+    if(width < 1400 && width > 490) {
+        document.getElementById("card").style.left="38%";
     } else if (width < 490) {
         document.getElementById("card").style.left="12.5%";
     } else {document.getElementById("card").style.left="37.5%";}
