@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+html, body{
+position: relative;
+overflow-x: hidden;
+overflow-y: hidden;
+}
 body {
 display: grid;
 place-items: center;
