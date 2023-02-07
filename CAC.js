@@ -50,7 +50,7 @@ function black() {
         if (black.status === 200) {
             let black_json = JSON.parse(black.response);
             console.log(JSON.parse(black.response));
-            var random = Math.floor(Math.random() * 6308);
+            var random = Math.floor(Math.random() * 131); //6308
             var black_text = black_json.black[random];
             black_card = black_text.text;
             black_card = black_card.replace("_", " ___ ");
@@ -68,7 +68,7 @@ function black() {
             document.getElementById('logo').style.opacity = '1';
             document.getElementById('text').style.opacity = '1';
             document.getElementById("card").addEventListener("click", function () {
-                var random = Math.floor(Math.random() * 6308);
+                var random = Math.floor(Math.random() * 131); //6308
                 var black_text = black_json.black[random];
                 black_card = black_text.text;
                 black_card = black_card.replace("_", " ___ ");
@@ -91,10 +91,10 @@ function white() {
         if (white.status === 200) {
             let white_json = JSON.parse(white.response);
             console.log(JSON.parse(white.response));
-            var random1 = Math.floor(Math.random() * 22441);
-            var random2 = Math.floor(Math.random() * 22441);
-            var random3 = Math.floor(Math.random() * 22441);
-            var random4 = Math.floor(Math.random() * 22441);
+            var random1 = Math.floor(Math.random() * 615); //22441
+            var random2 = Math.floor(Math.random() * 615); //22441
+            var random3 = Math.floor(Math.random() * 615); //22441
+            var random4 = Math.floor(Math.random() * 615); //22441
             var white_text1 = white_json.white[random1];
             var white_text2 = white_json.white[random2];
             var white_text3 = white_json.white[random3];
@@ -123,28 +123,28 @@ function white() {
             document.getElementById("cah2").style.display = "block";
             document.getElementById("cah3").style.display = "block";
             document.getElementById("cah4").style.display = "block";
-            document.getElementById("white").innerHTML = "Nuevas"
+            document.getElementById("white").innerHTML = "New Cards"
 
             document.getElementById("white1").addEventListener("click", function () {
-                var random = Math.floor(Math.random() * 22441);
+                var random = Math.floor(Math.random() * 615); //22441
                 document.getElementById("text1").innerHTML = white_json.white[random];
                 var audio = new Audio('swipe.mp3');
                 audio.play();
             });
             document.getElementById("white2").addEventListener("click", function () {
-                var random = Math.floor(Math.random() * 22441);
+                var random = Math.floor(Math.random() * 615); //22441
                 document.getElementById("text2").innerHTML = white_json.white[random];
                 var audio = new Audio('swipe.mp3');
                 audio.play();
             });
             document.getElementById("white3").addEventListener("click", function () {
-                var random = Math.floor(Math.random() * 22441);
+                var random = Math.floor(Math.random() * 615); //22441
                 document.getElementById("text3").innerHTML = white_json.white[random];
                 var audio = new Audio('swipe.mp3');
                 audio.play();
             });
             document.getElementById("white4").addEventListener("click", function () {
-                var random = Math.floor(Math.random() * 22441);
+                var random = Math.floor(Math.random() * 615); //22441
                 document.getElementById("text4").innerHTML = white_json.white[random];
                 var audio = new Audio('swipe.mp3');
                 audio.play();
@@ -188,7 +188,7 @@ function multi() {
 
 }
 function serverw() {
-    setTimeout(() => { document.getElementById('bar').style = "opacity:1;transition:opacity 10s;position:absolute;bottom: 8%;" }, 4000);
+    setTimeout(() => { document.getElementById('bar').style = "opacity:1;transition:opacity 10s;position:absolute;bottom: 1.5%;" }, 4000);
     if(width < 1400 && width > 490){
         document.getElementById("cards").style = "left:31.5%;%";
     } else if (width < 490) {
@@ -213,13 +213,13 @@ function serverw() {
     document.getElementById("cah2").style.display = "block";
     document.getElementById("cah3").style.display = "block";
     document.getElementById("cah4").style.display = "block";
-    document.getElementById("multiwhite").innerHTML = "Nuevas";
+    document.getElementById("multiwhite").innerHTML = "Get cards";
     document.getElementById('multi2white').style = 'display:block;';
     setTimeout(() => { document.getElementById('multi2white').style.opacity = '1'; }, 1000);
     setTimeout(() => { document.getElementById('multi2white').style.transition = 'opacity 2s'; }, 1000);
 }
 function serverb() {
-    setTimeout(() => { document.getElementById('bar').style = "opacity:1;transition:opacity 10s;position:absolute;bottom: 8%;" }, 4000);
+    setTimeout(() => { document.getElementById('bar').style = "opacity:1;transition:opacity 10s;position:absolute;bottom: 1.5%;" }, 4000);
     document.getElementById("text").style.display = "block";
     document.getElementById("text").style= "font-size:20px;";
     document.getElementById("text").style.color = "#FFF";
@@ -237,7 +237,7 @@ function serverb() {
     } else {document.getElementById("card").style.left="37.5%";}
     document.getElementById("multiblack").style.display = "block";
     document.getElementById("multiblack").style.opacity = "1";
-    document.getElementById("multiblack").innerHTML = "Nuevas";
+    document.getElementById("multiblack").innerHTML = "Get card";
     document.getElementById('multi2white').style = 'display:block;';
     setTimeout(() => { document.getElementById('multi2white').style.opacity = '1'; }, 1000);
     setTimeout(() => { document.getElementById('multi2white').style.transition = 'opacity 2s'; }, 1000);
@@ -251,10 +251,10 @@ function multiwhite() {
         if (white.status === 200) {
             let white_json = JSON.parse(white.response);
             console.log(JSON.parse(white.response));
-            var random1 = Math.floor(Math.random() * 22441);
-            var random2 = Math.floor(Math.random() * 22441);
-            var random3 = Math.floor(Math.random() * 22441);
-            var random4 = Math.floor(Math.random() * 22441);
+            var random1 = Math.floor(Math.random() * 615); //22441
+            var random2 = Math.floor(Math.random() * 615); //22441
+            var random3 = Math.floor(Math.random() * 615); //22441
+            var random4 = Math.floor(Math.random() * 615); //22441
             var white_text1 = white_json.white[random1];
             var white_text2 = white_json.white[random2];
             var white_text3 = white_json.white[random3];
@@ -283,28 +283,28 @@ function multiwhite() {
             document.getElementById("cah2").style.display = "block";
             document.getElementById("cah3").style.display = "block";
             document.getElementById("cah4").style.display = "block";
-            document.getElementById("multiwhite").innerHTML = "Nuevas"
+            document.getElementById("multiwhite").innerHTML = "New Cards"
 
             document.getElementById("white1").addEventListener("click", function () {
-                var random = Math.floor(Math.random() * 22441);
+                var random = Math.floor(Math.random() * 615); //22441
                 document.getElementById("text1").innerHTML = white_json.white[random];
                 var audio = new Audio('swipe.mp3');
                 audio.play();
             });
             document.getElementById("white2").addEventListener("click", function () {
-                var random = Math.floor(Math.random() * 22441);
+                var random = Math.floor(Math.random() * 615); //22441
                 document.getElementById("text2").innerHTML = white_json.white[random];
                 var audio = new Audio('swipe.mp3');
                 audio.play();
             });
             document.getElementById("white3").addEventListener("click", function () {
-                var random = Math.floor(Math.random() * 22441);
+                var random = Math.floor(Math.random() * 615); //22441
                 document.getElementById("text3").innerHTML = white_json.white[random];
                 var audio = new Audio('swipe.mp3');
                 audio.play();
             });
             document.getElementById("white4").addEventListener("click", function () {
-                var random = Math.floor(Math.random() * 22441);
+                var random = Math.floor(Math.random() * 615); //22441
                 document.getElementById("text4").innerHTML = white_json.white[random];
                 var audio = new Audio('swipe.mp3');
                 audio.play();
@@ -323,7 +323,7 @@ function multiblack() {
         if (black.status === 200) {
             let black_json = JSON.parse(black.response);
             console.log(JSON.parse(black.response));
-            var random = Math.floor(Math.random() * 6308);
+            var random = Math.floor(Math.random() * 131); //6308
             var black_text = black_json.black[random];
             black_card = black_text.text;
             black_card = black_card.replace("_", " ___ ");
@@ -340,9 +340,9 @@ function multiblack() {
             document.getElementById('card').style.opacity = '1';
             document.getElementById('logo').style.opacity = '1';
             document.getElementById('text').style.opacity = '1';
-            document.getElementById("multiblack").innerHTML="Nueva"
+            document.getElementById("multiblack").innerHTML="New Card"
             document.getElementById("card").addEventListener("click", function () {
-                var random = Math.floor(Math.random() * 6308);
+                var random = Math.floor(Math.random() * 131); //6308
                 var black_text = black_json.black[random];
                 black_card = black_text.text;
                 black_card = black_card.replace("_", " ___ ");
