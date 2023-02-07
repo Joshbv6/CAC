@@ -43,7 +43,7 @@ function start() {
 
 function black() {
     var black = new XMLHttpRequest();
-    black.open("GET", "https://raw.githubusercontent.com/Joshbv6/CAH/main/card_es.json");
+    black.open("GET", "https://raw.githubusercontent.com/Joshbv6/CAH/main/spanish.json");
     black.send();
     black.onload = () => {
         console.log(black);
@@ -84,7 +84,7 @@ function black() {
 
 function white() {
     var white = new XMLHttpRequest();
-    white.open("GET", "https://raw.githubusercontent.com/Joshbv6/CAH/main/card_es.json");
+    white.open("GET", "https://raw.githubusercontent.com/Joshbv6/CAH/main/spanish.json");
     white.send();
     white.onload = () => {
         console.log(white);
@@ -244,7 +244,7 @@ function serverb() {
 }
 function multiwhite() {
     var white = new XMLHttpRequest();
-    white.open("GET", "https://raw.githubusercontent.com/Joshbv6/CAH/main/card_es.json");
+    white.open("GET", "https://raw.githubusercontent.com/Joshbv6/CAH/main/spanish.json");
     white.send();
     white.onload = () => {
         console.log(white);
@@ -316,7 +316,7 @@ function multiwhite() {
 }
 function multiblack() {
     var black = new XMLHttpRequest();
-    black.open("GET", "https://raw.githubusercontent.com/Joshbv6/CAH/main/card_es.json");
+    black.open("GET", "https://raw.githubusercontent.com/Joshbv6/CAH/main/spanish.json");
     black.send();
     black.onload = () => {
         console.log(black);
