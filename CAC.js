@@ -50,11 +50,11 @@ function black() {
         if (black.status === 200) {
             let black_json = JSON.parse(black.response);
             console.log(JSON.parse(black.response));
-            var random = Math.floor(Math.random() * 131); //6308
+            var random = Math.floor(Math.random() * Object.keys(black_json.black).length); 
             var black_text = black_json.black[random];
             black_card = black_text.text;
             black_card = black_card.replace("_", " ___ ");
-            console.log("[" + random + "] " + black_card + " picks: " + black_text.pick);
+            console.log("[" + random + "] " + black_card + " picks: " + black_text.pick + ' total blacks: ' + Object.keys(black_json.black).length);
             var flip = new Audio('black.mp3');
             flip.play();
             document.getElementById("text").style.display = "block";
@@ -68,7 +68,7 @@ function black() {
             document.getElementById('logo').style.opacity = '1';
             document.getElementById('text').style.opacity = '1';
             document.getElementById("card").addEventListener("click", function () {
-                var random = Math.floor(Math.random() * 131); //6308
+                var random = Math.floor(Math.random() * Object.keys(black_json.black).length); 
                 var black_text = black_json.black[random];
                 black_card = black_text.text;
                 black_card = black_card.replace("_", " ___ ");
@@ -91,15 +91,15 @@ function white() {
         if (white.status === 200) {
             let white_json = JSON.parse(white.response);
             console.log(JSON.parse(white.response));
-            var random1 = Math.floor(Math.random() * 615); //22441
-            var random2 = Math.floor(Math.random() * 615); //22441
-            var random3 = Math.floor(Math.random() * 615); //22441
-            var random4 = Math.floor(Math.random() * 615); //22441
+            var random1 = Math.floor(Math.random() * Object.keys(white_json.white).length);
+            var random2 = Math.floor(Math.random() * Object.keys(white_json.white).length);
+            var random3 = Math.floor(Math.random() * Object.keys(white_json.white).length);
+            var random4 = Math.floor(Math.random() * Object.keys(white_json.white).length);
             var white_text1 = white_json.white[random1];
             var white_text2 = white_json.white[random2];
             var white_text3 = white_json.white[random3];
             var white_text4 = white_json.white[random4];
-            console.log("[" + random1 + "] " + white_text1);
+            console.log("[" + random1 + "] " + white_text1 + ' total whites: ' + Object.keys(white_json.white).length);
             var newcards = new Audio('white.mp3');
             newcards.play();
             document.getElementById("cards").style.display = "block";
@@ -126,25 +126,25 @@ function white() {
             document.getElementById("white").innerHTML = "New Cards"
 
             document.getElementById("white1").addEventListener("click", function () {
-                var random = Math.floor(Math.random() * 615); //22441
+                var random = Math.floor(Math.random() * Object.keys(white_json.white).length);
                 document.getElementById("text1").innerHTML = white_json.white[random];
                 var audio = new Audio('swipe.mp3');
                 audio.play();
             });
             document.getElementById("white2").addEventListener("click", function () {
-                var random = Math.floor(Math.random() * 615); //22441
+                var random = Math.floor(Math.random() * Object.keys(white_json.white).length);
                 document.getElementById("text2").innerHTML = white_json.white[random];
                 var audio = new Audio('swipe.mp3');
                 audio.play();
             });
             document.getElementById("white3").addEventListener("click", function () {
-                var random = Math.floor(Math.random() * 615); //22441
+                var random = Math.floor(Math.random() * Object.keys(white_json.white).length);
                 document.getElementById("text3").innerHTML = white_json.white[random];
                 var audio = new Audio('swipe.mp3');
                 audio.play();
             });
             document.getElementById("white4").addEventListener("click", function () {
-                var random = Math.floor(Math.random() * 615); //22441
+                var random = Math.floor(Math.random() * Object.keys(white_json.white).length);
                 document.getElementById("text4").innerHTML = white_json.white[random];
                 var audio = new Audio('swipe.mp3');
                 audio.play();
@@ -251,15 +251,15 @@ function multiwhite() {
         if (white.status === 200) {
             let white_json = JSON.parse(white.response);
             console.log(JSON.parse(white.response));
-            var random1 = Math.floor(Math.random() * 615); //22441
-            var random2 = Math.floor(Math.random() * 615); //22441
-            var random3 = Math.floor(Math.random() * 615); //22441
-            var random4 = Math.floor(Math.random() * 615); //22441
+            var random1 = Math.floor(Math.random() * Object.keys(white_json.white).length);
+            var random2 = Math.floor(Math.random() * Object.keys(white_json.white).length);
+            var random3 = Math.floor(Math.random() * Object.keys(white_json.white).length);
+            var random4 = Math.floor(Math.random() * Object.keys(white_json.white).length);
             var white_text1 = white_json.white[random1];
             var white_text2 = white_json.white[random2];
             var white_text3 = white_json.white[random3];
             var white_text4 = white_json.white[random4];
-            console.log("[" + random1 + "] " + white_text1);
+            console.log("[" + random1 + "] " + white_text1 + ' total whites: ' + Object.keys(white_json.white).length);
             var newcards = new Audio('white.mp3');
             newcards.play();
             document.getElementById("cards").style.display = "block";
@@ -286,25 +286,25 @@ function multiwhite() {
             document.getElementById("multiwhite").innerHTML = "New Cards"
 
             document.getElementById("white1").addEventListener("click", function () {
-                var random = Math.floor(Math.random() * 615); //22441
+                var random = Math.floor(Math.random() * Object.keys(white_json.white).length);
                 document.getElementById("text1").innerHTML = white_json.white[random];
                 var audio = new Audio('swipe.mp3');
                 audio.play();
             });
             document.getElementById("white2").addEventListener("click", function () {
-                var random = Math.floor(Math.random() * 615); //22441
+                var random = Math.floor(Math.random() * Object.keys(white_json.white).length);
                 document.getElementById("text2").innerHTML = white_json.white[random];
                 var audio = new Audio('swipe.mp3');
                 audio.play();
             });
             document.getElementById("white3").addEventListener("click", function () {
-                var random = Math.floor(Math.random() * 615); //22441
+                var random = Math.floor(Math.random() * Object.keys(white_json.white).length);
                 document.getElementById("text3").innerHTML = white_json.white[random];
                 var audio = new Audio('swipe.mp3');
                 audio.play();
             });
             document.getElementById("white4").addEventListener("click", function () {
-                var random = Math.floor(Math.random() * 615); //22441
+                var random = Math.floor(Math.random() * Object.keys(white_json.white).length);
                 document.getElementById("text4").innerHTML = white_json.white[random];
                 var audio = new Audio('swipe.mp3');
                 audio.play();
@@ -323,11 +323,11 @@ function multiblack() {
         if (black.status === 200) {
             let black_json = JSON.parse(black.response);
             console.log(JSON.parse(black.response));
-            var random = Math.floor(Math.random() * 131); //6308
+            var random = Math.floor(Math.random() * Object.keys(black_json.black).length); 
             var black_text = black_json.black[random];
             black_card = black_text.text;
             black_card = black_card.replace("_", " ___ ");
-            console.log("[" + random + "] " + black_card + " picks: " + black_text.pick);
+            console.log("[" + random + "] " + black_card + " picks: " + black_text.pick + ' total blacks: ' + Object.keys(black_json.black).length);
             var flip = new Audio('black.mp3');
             flip.play();
             document.getElementById("text").style.display = "block";
@@ -342,7 +342,7 @@ function multiblack() {
             document.getElementById('text').style.opacity = '1';
             document.getElementById("multiblack").innerHTML="New Card"
             document.getElementById("card").addEventListener("click", function () {
-                var random = Math.floor(Math.random() * 131); //6308
+                var random = Math.floor(Math.random() * Object.keys(black_json.black).length); 
                 var black_text = black_json.black[random];
                 black_card = black_text.text;
                 black_card = black_card.replace("_", " ___ ");
@@ -355,4 +355,5 @@ function multiblack() {
         }
     }
 }
+
 const instructions = "To play this game with some friends, one of you has to pick the black card. This will generate a random black card, and your friends have to choose the white card. (Don't worry, you can change roles later on the game)<br>The player who chose the black card will read out loud the card, and the player that chose the white cards will have random cards and they will have to choose which one on their cards adapts better to the text on the black card.<br>Once they choose and tell out loud aswell their answer, the one with the black card will vote which answer was funnier, so the one who told that answe takes a point, the one wit more points win the game but...you choose your rules, really <br> When the round is over, the players with white cards click te cards that were chosen and new ones will be given to you, same with the black card. <br>You will have the option to change roles if you want."
