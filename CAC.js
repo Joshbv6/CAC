@@ -1,4 +1,4 @@
-var cssId = 'css';  // you could encode the css path itself to generate id..
+var cssId = 'css'; 
 var width = screen.width;
         if (!document.getElementById(cssId))
         {
@@ -123,7 +123,7 @@ function white() {
             document.getElementById("cah2").style.display = "block";
             document.getElementById("cah3").style.display = "block";
             document.getElementById("cah4").style.display = "block";
-            document.getElementById("white").innerHTML = "New Cards"
+            document.getElementById("white").innerHTML = "Nuevas"
 
             document.getElementById("white1").addEventListener("click", function () {
                 var random = Math.floor(Math.random() * Object.keys(white_json.white).length);
@@ -188,7 +188,7 @@ function multi() {
 
 }
 function serverw() {
-    setTimeout(() => { document.getElementById('bar').style = "opacity:1;transition:opacity 10s;position:absolute;bottom: 1.5%;" }, 4000);
+    setTimeout(() => { document.getElementById('bar').style = "opacity:1;transition:opacity 10s;position:absolute;bottom: 8%;" }, 4000);
     if(width < 1400 && width > 490){
         document.getElementById("cards").style = "left:31.5%;%";
     } else if (width < 490) {
@@ -213,13 +213,13 @@ function serverw() {
     document.getElementById("cah2").style.display = "block";
     document.getElementById("cah3").style.display = "block";
     document.getElementById("cah4").style.display = "block";
-    document.getElementById("multiwhite").innerHTML = "Get cards";
+    document.getElementById("multiwhite").innerHTML = "Repartir";
     document.getElementById('multi2white').style = 'display:block;';
     setTimeout(() => { document.getElementById('multi2white').style.opacity = '1'; }, 1000);
     setTimeout(() => { document.getElementById('multi2white').style.transition = 'opacity 2s'; }, 1000);
 }
 function serverb() {
-    setTimeout(() => { document.getElementById('bar').style = "opacity:1;transition:opacity 10s;position:absolute;bottom: 1.5%;" }, 4000);
+    setTimeout(() => { document.getElementById('bar').style = "opacity:1;transition:opacity 10s;position:absolute;bottom: 8%;" }, 4000);
     document.getElementById("text").style.display = "block";
     document.getElementById("text").style= "font-size:20px;";
     document.getElementById("text").style.color = "#FFF";
@@ -237,7 +237,7 @@ function serverb() {
     } else {document.getElementById("card").style.left="37.5%";}
     document.getElementById("multiblack").style.display = "block";
     document.getElementById("multiblack").style.opacity = "1";
-    document.getElementById("multiblack").innerHTML = "Get card";
+    document.getElementById("multiblack").innerHTML = "Nueva";
     document.getElementById('multi2white').style = 'display:block;';
     setTimeout(() => { document.getElementById('multi2white').style.opacity = '1'; }, 1000);
     setTimeout(() => { document.getElementById('multi2white').style.transition = 'opacity 2s'; }, 1000);
@@ -283,7 +283,7 @@ function multiwhite() {
             document.getElementById("cah2").style.display = "block";
             document.getElementById("cah3").style.display = "block";
             document.getElementById("cah4").style.display = "block";
-            document.getElementById("multiwhite").innerHTML = "New Cards"
+            document.getElementById("multiwhite").innerHTML = "Repartir";
 
             document.getElementById("white1").addEventListener("click", function () {
                 var random = Math.floor(Math.random() * Object.keys(white_json.white).length);
@@ -340,7 +340,7 @@ function multiblack() {
             document.getElementById('card').style.opacity = '1';
             document.getElementById('logo').style.opacity = '1';
             document.getElementById('text').style.opacity = '1';
-            document.getElementById("multiblack").innerHTML="New Card"
+            document.getElementById("multiblack").innerHTML="Repartir"
             document.getElementById("card").addEventListener("click", function () {
                 var random = Math.floor(Math.random() * Object.keys(black_json.black).length); 
                 var black_text = black_json.black[random];
